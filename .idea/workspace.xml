@@ -14,6 +14,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -104,13 +118,17 @@
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Sm0bQ6LiEnXCcOyMqMQTfNgjKU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../registration" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -118,6 +136,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\somaia.nazary\code\pharmacy\resources\views\pharmacy" />
+      <recent name="C:\Users\somaia.nazary\code\pharmacy\resources\views" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -152,7 +177,32 @@
       <workItem from="1572323403425" duration="1849000" />
       <workItem from="1572408424699" duration="848000" />
       <workItem from="1572425750854" duration="2227000" />
-      <workItem from="1572494816455" duration="1732000" />
+      <workItem from="1572494816455" duration="2333000" />
+      <workItem from="1572667548045" duration="22499000" />
+      <workItem from="1572753302576" duration="19391000" />
+      <workItem from="1572840472723" duration="16417000" />
+      <workItem from="1572927350067" duration="120000" />
+      <workItem from="1572927516781" duration="16755000" />
+      <workItem from="1572954297735" duration="4000" />
+      <workItem from="1573013799363" duration="1574000" />
+      <workItem from="1573015948269" duration="17000" />
+      <workItem from="1573016058060" duration="64000" />
+      <workItem from="1573016145583" duration="13233000" />
+      <workItem from="1573099587805" duration="8334000" />
+      <workItem from="1573358793751" duration="16096000" />
+      <workItem from="1573444699850" duration="20928000" />
+      <workItem from="1573531756622" duration="1031000" />
+      <workItem from="1573533105854" duration="18636000" />
+      <workItem from="1573618724460" duration="16911000" />
+      <workItem from="1573704352769" duration="1518000" />
+      <workItem from="1573705901924" duration="721000" />
+      <workItem from="1573706641193" duration="4000" />
+      <workItem from="1573706866736" duration="395000" />
+      <workItem from="1573707283770" duration="124000" />
+      <workItem from="1573707734449" duration="2263000" />
+      <workItem from="1573713454901" duration="2180000" />
+      <workItem from="1573877668844" duration="1109000" />
+      <workItem from="1573879177282" duration="15128000" />
     </task>
     <servers />
   </component>
@@ -164,10 +214,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/pharmacy/login.blade.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

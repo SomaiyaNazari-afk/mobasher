@@ -1,22 +1,27 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
+use Carbon\Carbon;
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
         DB::table('users')->insert([
-            'name' => Str::random(20),
-            'email' => Str::random(20).'@gmail.com',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('password'),
+            'first_name' => 'Somaiyah',
+            'last_name' => 'Nazari',
+            'gender' => 'female',
+            'phone' => '9083839402',
+            'dob' => Carbon::create('1992', '05', '06'),
+            'country' => 'Afghanistan',
+            'city' => 'Kabul',
+            'address' => 'Kabul Afghanistan',
+            'user_type' => 'admin',
         ]);
     }
 }

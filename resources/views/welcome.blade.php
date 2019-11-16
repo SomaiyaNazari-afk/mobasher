@@ -6,16 +6,17 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <script>window.Laravel = { csrfToken: '{{ csrf_token() }}' }</script>
-
-        <title>Pharmacy</title>
-
-        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Pharmacy</title>
+        <br>
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("https://entrackr.com/wp-content/uploads/2019/10/Online-pharmacy--1200x600.jpg");
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -68,6 +69,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -75,9 +77,10 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+{{--                        @if (Route::has('register'))--}}
+{{--                            <a href="{{ route('register') }}">Register</a>--}}
+{{--                        @endif--}}
+
                     @endauth
                 </div>
             @endif
