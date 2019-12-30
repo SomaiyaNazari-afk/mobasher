@@ -6,22 +6,33 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateProductsTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
+
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('type');
-            $table->string('file_no');
-            $table->date('production');
-            $table->date('expiration');
-            $table->float('price');
-            $table->string('company');
-            $table->string('currency');
+            $table->integer('file_no');
+            $table->date('production_date');
+            $table->date('expiry_date');
+            $table->integer('price');
+            $table->string('company_name');
+            $table->integer('currency');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
         Schema::dropIfExists('products');
