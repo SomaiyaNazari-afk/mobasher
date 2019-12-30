@@ -16,10 +16,10 @@ class UserSeeder extends Seeder
             'first_name' => 'Somaiyah',
             'last_name' => 'Nazari',
             'gender' => 'female',
-            'phone' => '9083839402',
+            'phone' => '+933839402',
             'dob' => Carbon::create('1992', '05', '06'),
-            'country' => 'Afghanistan',
-            'city' => 'Kabul',
+            'country_id' => '1',
+            'province_id' => '1',
             'address' => 'Kabul Afghanistan',
             'user_type' => 'admin',
         ]);

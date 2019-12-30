@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Pharmacy;
+use Redirect;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Schema\Blueprint;
@@ -12,18 +14,27 @@ use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
-      public function index()
-      {
-          $users = User::all();
+    public function index()
+    {
+        $users = User::with([
+        'country:id,name', 'province:id,name'])->latest()->paginate(5);
 
-          return view('pharmacy.index',compact('users'))
-              ->with('i', (request()->input('page', 1) - 1) * 5);
-      }
+        return view('users.list', compact('users'))
+        ->with('i', (request()->input('page', 1) -1) *5);
+
+    }
 
     public function create()
     {
-        return view('pharmacy.create');
+        return view('users.create');
     }
+
+    public function save(Request $request)
+    {
+         return redirect()->route('users.list')
+         ->with('success','User created successfully.');
+   }
+
 
     public function store(Request $request)
     {
@@ -32,31 +43,36 @@ class UserController extends Controller
             $request->request->add(['password' => bcrypt($hashed_random_password)]);
         }
 
-        User::create($request->all());
+        Pharmacy::create($request->all());
 
-        return redirect()->route('pharmacy.index')
-            ->with('success','User created successfully.');
+        return redirect()->route('pharmacies.list')
+            ->with('success', 'Pharmacy created successfully.');
     }
 
     public function show(User $user)
     {
-        return view('pharmacy.user_list',compact('user'));
+        return view('users.show',compact('user'));
     }
+
 
     public function edit(User $user)
     {
-        return view('pharmacy.edit',compact('user'));
+        return view('users.edit',compact('user'));
     }
 
     public function update(Request $request, User $user)
-    {
-        $request->validate([
+    {//validate
+        $userData = [
+          'first_name' => $request->get('first_name'),
+          'last_name' => $request->get('last_name'),
+          'email' => $request->get('email'),
+          'phone' => $request->get('phone'),
+          'country_id' => $request->get('country'),
+          'address' => $request->get('address'),
+        ];
+        $user->update($userData);
 
-        ]);
-
-        $user->update($request->all());
-
-        return redirect()->route('pharmacy.index')
+        return redirect()->route('users.list')
             ->with('success','User updated successfully');
     }
 
@@ -65,7 +81,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('pharmacy.index')
-            ->with('success','User deleted successfully');
+        return redirect()->route('users.list')
+            ->with('success','Users deleted successfully');
     }
 }

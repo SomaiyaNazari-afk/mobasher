@@ -43,7 +43,7 @@
             </a>
           </li>
           <li>
-            <a href="create.blade.php">
+            <a href="../users/create.blade.php">
               <i class="now-ui-icons education_atom"></i>
               <p>Icons</p>
             </a>
@@ -61,19 +61,19 @@
             </a>
           </li>
           <li>
-            <a href="user_profile.blade.php">
+            <a href="../users/profile.blade.php">
               <i class="now-ui-icons users_single-02"></i>
               <p>User Profile</p>
             </a>
           </li>
           <li>
-            <a href="user_list.blade.php">
+            <a href="../users/list.blade.php">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Table List</p>
             </a>
           </li>
           <li>
-            <a href="pharmacy_list.blade.php">
+            <a href="list.blade.php">
               <i class="now-ui-icons text_caps-small"></i>
               <p>Typography</p>
             </a>

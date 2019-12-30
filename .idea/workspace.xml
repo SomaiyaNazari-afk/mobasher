@@ -122,6 +122,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/proengsoft/laravel-jsvalidation" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Sm0bQ6LiEnXCcOyMqMQTfNgjKU" />
@@ -140,6 +141,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\somaia.nazary\code\pharmacy\resources\views\users" />
       <recent name="C:\Users\somaia.nazary\code\pharmacy\resources\views\pharmacy" />
       <recent name="C:\Users\somaia.nazary\code\pharmacy\resources\views" />
     </key>
@@ -202,7 +204,42 @@
       <workItem from="1573707734449" duration="2263000" />
       <workItem from="1573713454901" duration="2180000" />
       <workItem from="1573877668844" duration="1109000" />
-      <workItem from="1573879177282" duration="15128000" />
+      <workItem from="1573879177282" duration="15789000" />
+      <workItem from="1573964005487" duration="15755000" />
+      <workItem from="1574051095416" duration="15327000" />
+      <workItem from="1574139907960" duration="4563000" />
+      <workItem from="1574153446756" duration="8427000" />
+      <workItem from="1574223918394" duration="16728000" />
+      <workItem from="1574308640021" duration="11485000" />
+      <workItem from="1574482103913" duration="16487000" />
+      <workItem from="1574567437174" duration="19997000" />
+      <workItem from="1574655011235" duration="16895000" />
+      <workItem from="1574741700291" duration="21111000" />
+      <workItem from="1574828206284" duration="16620000" />
+      <workItem from="1574913341409" duration="4784000" />
+      <workItem from="1575086552891" duration="14020000" />
+      <workItem from="1575107042772" duration="6730000" />
+      <workItem from="1575173085957" duration="22173000" />
+      <workItem from="1575259026083" duration="15216000" />
+      <workItem from="1575346530723" duration="14908000" />
+      <workItem from="1575432073545" duration="17502000" />
+      <workItem from="1575518067190" duration="10896000" />
+      <workItem from="1575690645509" duration="17245000" />
+      <workItem from="1575784446229" duration="15260000" />
+      <workItem from="1575865304307" duration="15203000" />
+      <workItem from="1575951239836" duration="19544000" />
+      <workItem from="1576037856101" duration="14965000" />
+      <workItem from="1576123559464" duration="11718000" />
+      <workItem from="1576296552966" duration="16995000" />
+      <workItem from="1576383400534" duration="7661000" />
+      <workItem from="1576469601570" duration="14260000" />
+      <workItem from="1576555738627" duration="30428000" />
+      <workItem from="1576657147600" duration="1761000" />
+      <workItem from="1576666118949" duration="23147000" />
+      <workItem from="1576987992730" duration="13482000" />
+      <workItem from="1577074349253" duration="16598000" />
+      <workItem from="1577159567539" duration="8866000" />
+      <workItem from="1577678216319" duration="604000" />
     </task>
     <servers />
   </component>
@@ -226,8 +263,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/pharmacy/login.blade.php</url>
+          <url>file://$PROJECT_DIR$/resources/views/pharmacies/login.blade.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/users/create.blade.php</url>
+          <line>136</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/products/create.blade.php</url>
+          <line>97</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    @include('pharmacy.create')
+    @include('users.create')
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Register new user
     </button>
