@@ -1,99 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Register New Medicine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+@extends('layouts.master')
 
-</head>
-<body>
-<!-- Button trigger modal -->
+@section('title')
+    Product Registration
+@endsection
 
+@section('content')
 
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-    Register new medicine
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header ">
-                <h5 class="modal-title" id="exampleModalLabel">Register new medicine</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="card uper">
-                    <div class="card-header">
-                    </div>
-                    <div class="card-body">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div><br />
+<div class="content">
+<div class="row">
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title">Product Registration</h5>
+        </div>
+        <div class="card-body">
+            <form method="post" action="{{ route('products.store') }}" >
+                {{csrf_field()}}
+
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label> Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Product name" value="">
+                        </div>
+                        @if($errors->has('name'))
+                            <small class="has-error text-danger">{{ $errors->first('name') }}</small>
                         @endif
-                        <form action="{{ route('products.store') }}" method="post">
-                            <div class="form-group">
-                                @csrf
-                                <label for="name">Name:</label>
-                                <input type="text" class="form-control" name="name"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="type">Type:</label>
-                                <input type="text" class="form-control" placeholder="Type" name="type"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="file_no">File_No:</label>
-                                <input type="text" class="form-control" name="file_no"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="production_date">Production_Date:</label>
-                                <input type="date" class="form-control" name="production_date"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="expiry_date">Expiry_Date :</label>
-                                <input type="date" class="form-control" name="expiry_date"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price:</label>
-                                <input type="text" class="form-control" name="price"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="company_name">Company_Name:</label>
-                                <input type="text" class="form-control" name="company_name"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="currency">Currency:</label>
-                                <input type="text" class="form-control" name="currency"/>
-                            </div>
+                    </div>
+                    <div class="col-md-6 px-1">
+                        <div class="form-group">
+                            <label>Type</label>
+                            <input type="text" name="type" id="type" class="form-control" placeholder="Product Type" value="">
+                        </div>
+                        @if($errors->has('type'))
+                            <small class="has-error text-danger">{{ $errors->first('type') }}</small>
+                        @endif
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pr-1">
+                        <div class="form-group">
+                            <label>File No.</label>
+                            <input type="text" name="file_no" id="file_no" class="form-control" placeholder="File Number" value="">
+                        </div>
+                        @if($errors->has('file_no'))
+                            <small class="has-error text-danger">{{ $errors->first('file_no') }}</small>
+                        @endif
+                    </div>
+                    <div class="col-md-6 px-1">
+                        <div class="form-group">
+                            <label>Production Date</label>
+                            <input type="date" name="production" id="production" class="form-control" placeholder="Production Date" value="">
+                        </div>
+                        @if($errors->has('production'))
+                            <small class="has-error text-danger">{{ $errors->first('production') }}</small>
+                                    @endif
+                                </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Add</button>
+                        <div class="col-md-6 pr-1">
+                            <div class="form-group">
+                                <label>Expiry Date</label>
+                                <input type="date" name="expiration" id="expiration" placeholder="Expiration Date" class="form-control" value="">
+                            </div>
+                            @if($errors->has('expiration'))
+                                <small class="has-error text-danger">{{ $errors->first('expiration') }}</small>
+                            @endif
+                        </div>
+                        <div class="col-md-6 px-1">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="text" name="price" id="price" placeholder="67.6" class="form-control" value="">
+                            </div>
+                            @if($errors->has('price'))
+                                <small class="has-error text-danger">{{ $errors->first('price') }}</small>
+                            @endif
+                        </div>
+
+                        <div class="col-md-6 pr-1 ">
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" name="company" id="company" placeholder="Company" class="form-control" value="">
+                            </div>
+                            @if($errors->has('company'))
+                                <small class="has-error text-danger">{{ $errors->first('company') }}</small>
+                            @endif
+                        </div>
+                        <div class="col-md-6 px-1">
+                            <div class="form-group">
+                                <label>Currency</label>
+                                <input type="text" name="currency" id="currency" placeholder="Currency" class="form-control" value="">
+                            </div>
+                            @if($errors->has('currency'))
+                                <small class="has-error text-danger">{{ $errors->first('currency') }}</small>
+                            @endif
+                        </div>
+                    <div class="col-md-6 px-1">
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="float: right;" >Add</button>
+                        <input class="btn btn-danger" type="reset" style="float: right;" value="Reset">
+                        <a href="{{ route('products.list') }}" class="btn btn-secondary" style="float: right;">Back</a>
+                        </div>
+                    </div>
+                </div>
+                </form>
             </div>
         </div>
-
     </div>
-    </form>
-</div>
-</body>
-</html>
-<script>
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    })
-</script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</div></div>
 
-
-{{----}}
-@section('scripts')
 @endsection
+
+<script src="{!!url('../assets/js/core/jquery.min.js')!!}"></script>
+<script type="text/javascript" src="{{asset('js/pharmacyRegForm.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/countryProvince.js')}}"></script>
+<script type="text/javascript" src="{{asset('./js/fileUpload.js')}}"></script>
+<link rel="stylesheet" href="{{ asset('css/pharmacyRegDesign.css') }}" />
+
+

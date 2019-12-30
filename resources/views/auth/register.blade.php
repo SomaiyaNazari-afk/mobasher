@@ -1,8 +1,4 @@
-@extends('layouts.master')
-
-@section('title')
-    Product Registration
-@endsection
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -78,8 +74,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('scripts')
-
 @endsection
